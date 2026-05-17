@@ -39,6 +39,15 @@ The same pattern works for `workshop2-ticket-review` and `workshop3-copilot-demo
 | MAS document analysis pipeline | `showcases/finance/demo-doc-analysis` | Instructor demo / screenshots / general audience briefing | Context Triage, RAG Pipeline, Progress Tracking, Human-in-the-loop Review |
 | MAS compliance analyst agent | `showcases/finance/demo-MAS-analyst` | Broader finance use-case gallery | Tool Dispatch, Product Mapping, Compliance Gate |
 
+## Web Walkthrough
+
+The public case library has a finance landing page and one page per demo:
+
+- https://kage-ai.com/training/finance/
+- https://kage-ai.com/zh/cases/finance/
+
+Use these pages when a live local run is not convenient. They include run commands, flow diagrams, screenshots, and pattern mappings for each demo.
+
 ## Recommended Workshop Flow
 
 1. **Run** one of the runnable workshops locally.
@@ -62,6 +71,7 @@ The `assets/` folder contains diagrams for slides and the website:
 - `sdd-copilot-loop.png`
 - `pattern-selection-card-flow.png`
 - `agent-pattern-matrix-black.png`
+- `screenshots/*.png`
 
 ## Source Library
 
