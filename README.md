@@ -2,10 +2,11 @@
 
 Training demos for the LSEG / Refinitiv AI Agent workshop.
 
-The repo has two layers:
+The repo has three layers:
 
 1. **Runnable workshops**: small Python projects that learners can download, install, and run locally.
-2. **Showcase demos**: richer Streamlit demos for instructor walkthroughs, screenshots, and follow-up sessions.
+2. **Visual walkthroughs**: static HTML pages and blueprint PNGs that explain the same workshops step by step.
+3. **Showcase demos**: richer Streamlit demos for instructor walkthroughs, screenshots, and follow-up sessions.
 
 All runnable workshops include a no-key demo path. Azure OpenAI keys are optional for deeper exercises.
 
@@ -29,6 +30,18 @@ python main.py
 
 The same pattern works for `workshop2-ticket-review` and `workshop3-copilot-demo`.
 
+Open the visual walkthrough for the same case:
+
+```bash
+open ../visual/index.html
+```
+
+Or open these files directly in a browser:
+
+- `workshops/workshop1-compliance/visual/index.html`
+- `workshops/workshop2-ticket-review/visual/index.html`
+- `workshops/workshop3-copilot-demo/visual/index.html`
+
 ## What To Run In Class
 
 | Case | Folder | Best Use | Main Patterns |
@@ -47,6 +60,12 @@ The public case library has a finance landing page and one page per demo:
 - https://kage-ai.com/zh/cases/finance/
 
 Use these pages when a live local run is not convenient. They include run commands, flow diagrams, screenshots, and pattern mappings for each demo.
+
+The repo also includes local visual walkthrough pages. They are useful when you want to inspect the architecture without a web server:
+
+- `workshops/workshop1-compliance/visual/index.html`
+- `workshops/workshop2-ticket-review/visual/index.html`
+- `workshops/workshop3-copilot-demo/visual/index.html`
 
 ## Recommended Workshop Flow
 
@@ -71,6 +90,12 @@ The `assets/` folder contains diagrams for slides and the website:
 - `sdd-copilot-loop.png`
 - `pattern-selection-card-flow.png`
 - `agent-pattern-matrix-black.png`
+- `visual/workshop-ladder-blueprint.png`
+- `visual/workshop1-pattern-blueprint.png`
+- `visual/workshop2-pattern-blueprint.png`
+- `visual/workshop3-pattern-blueprint.png`
+- `visual/mas-document-analysis-blueprint.png`
+- `visual/mas-compliance-analyst-blueprint.png`
 - `screenshots/*.png`
 
 ## Source Library

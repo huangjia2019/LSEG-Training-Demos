@@ -17,6 +17,16 @@ cd src
 python main.py  # Demo 模式
 ```
 
+## 可视化讲解页
+
+运行 CLI 之后，可以直接打开：
+
+```bash
+open visual/index.html
+```
+
+这页把同一个 demo 拆成六步：规约上下文、Copilot 计划、Prompt Chain、质量验证、Skill Package、渐进交付，并把 SDD 与设计模式对应起来。
+
 ## 文件结构
 
 ```

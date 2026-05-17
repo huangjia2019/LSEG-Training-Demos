@@ -12,9 +12,19 @@ Start from concrete demos before introducing the pattern vocabulary.
 
 Each demo has a no-key path. If Azure OpenAI credentials are available, learners can switch from mock execution to model-backed execution by creating `.env` from `.env.example`.
 
+Each runnable workshop now has a visual page as well:
+
+| Case | CLI path | Visual page |
+|---|---|---|
+| Regulatory document analysis | `workshops/workshop1-compliance` | `workshops/workshop1-compliance/visual/index.html` |
+| Multi-agent ticket review | `workshops/workshop2-ticket-review` | `workshops/workshop2-ticket-review/visual/index.html` |
+| Copilot + SDD meeting agent | `workshops/workshop3-copilot-demo` | `workshops/workshop3-copilot-demo/visual/index.html` |
+
+Use the CLI output as the evidence, then use the visual page to inspect the architecture. The pattern blueprint diagrams live in `assets/visual/`.
+
 ## Afternoon: Pattern Selection
 
-After learners see outputs, ask them to explain the architecture.
+After the outputs are visible, explain the architecture through a small set of design questions.
 
 For each case:
 
@@ -43,4 +53,3 @@ Use the showcase demos when the audience includes non-engineers or when a full l
 | Workshop 3 | 30 min | Copilot + SDD flow |
 | Pattern card | 45 min | Group design discussion |
 | Share-out | 30 min | Each group presents one architecture |
-

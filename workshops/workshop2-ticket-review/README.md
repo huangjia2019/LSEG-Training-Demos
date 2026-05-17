@@ -22,6 +22,16 @@ cd src
 python main.py  # Demo 模式，演示三种工单场景
 ```
 
+## 可视化讲解页
+
+运行 CLI 之后，可以直接打开：
+
+```bash
+open visual/index.html
+```
+
+这页把同一个 demo 拆成六步：原始工单、Parser Agent、Quality Agent、Knowledge Agent、Merge 节点、Human Review，并把职责边界和风险路由对应到设计模式。
+
 ## 文件结构
 
 ```

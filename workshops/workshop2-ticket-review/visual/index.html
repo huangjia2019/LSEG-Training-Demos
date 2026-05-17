@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workshop 2 · Multi-Agent Ticket Review · Visual Walkthrough</title>
+  <link rel="stylesheet" href="../../_visual/blueprint.css">
+</head>
+<body>
+  <main class="lab-shell">
+    <nav class="lab-nav">
+      <a href="../../../README.md">LSEG Training Demos</a>
+      <span>workshops/workshop2-ticket-review</span>
+    </nav>
+    <section class="lab-hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Visual workshop walkthrough</div>
+        <h1>Workshop 2 · Multi-Agent Ticket Review</h1>
+        <p class="lede">A structured state graph for parser, quality, knowledge, merge, and human review.</p>
+        <div class="chip-row"><span class="chip">Handoff Chain</span><span class="chip">Fan-out/Gather</span><span class="chip">Adversarial Review</span><span class="chip">RAG Pipeline</span><span class="chip">Approval Gate</span><span class="chip">Observability Harness</span></div>
+      </div>
+      <aside class="hero-panel">
+        <div class="metric"><strong>Run first</strong><span>Use the CLI path to produce concrete output.</span></div>
+        <div class="metric"><strong>Observe state</strong><span>Look for intermediate objects, checks, scores, and routing reasons.</span></div>
+        <div class="metric"><strong>Map patterns</strong><span>Use the chips as the first pattern-selection vocabulary.</span></div>
+      </aside>
+    </section>
+
+    <section class="blueprint">
+      <img src="../../../assets/visual/workshop2-pattern-blueprint.png" alt="Workshop 2 · Multi-Agent Ticket Review blueprint">
+    </section>
+
+    <section class="section">
+      <h2>Step-by-step architecture</h2>
+      <div class="step-grid">
+        <article class="step-card">
+  <div class="step-number">01</div>
+  <h3>Raw Ticket</h3>
+  <p>Capture user text, metadata, priority, component, and environment.</p>
+  <span class="chip">Context Triage</span>
+</article>
+<article class="step-card">
+  <div class="step-number">02</div>
+  <h3>Parser Agent</h3>
+  <p>Extract structured JSON so later agents do not parse prose again.</p>
+  <span class="chip">Tool Dispatch</span>
+</article>
+<article class="step-card">
+  <div class="step-number">03</div>
+  <h3>Quality Agent</h3>
+  <p>Check reproduction steps, environment, expected behavior, and evidence.</p>
+  <span class="chip">Adversarial Review</span>
+</article>
+<article class="step-card">
+  <div class="step-number">04</div>
+  <h3>Knowledge Agent</h3>
+  <p>Search historical issues and detect duplicates or known incidents.</p>
+  <span class="chip">RAG Pipeline</span>
+</article>
+<article class="step-card">
+  <div class="step-number">05</div>
+  <h3>Merge Node</h3>
+  <p>Join parallel findings into one risk-tiered decision state.</p>
+  <span class="chip">Fan-out/Gather</span>
+</article>
+<article class="step-card">
+  <div class="step-number">06</div>
+  <h3>Human Review</h3>
+  <p>Route weak, duplicate, or high-priority cases to a reviewer.</p>
+  <span class="chip">Approval Gate</span>
+</article>
+      </div>
+    </section>
+
+    <section class="section two-col">
+      <div>
+        <h2>Run</h2>
+        <div class="run-panel"><pre>cd workshops/workshop2-ticket-review
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cd src
+python main.py</pre></div>
+      </div>
+      <figure class="screenshot">
+        <img src="../../../assets/screenshots/workshop2-ticket-review-terminal.png" alt="Workshop 2 · Multi-Agent Ticket Review terminal screenshot">
+        <figcaption>Terminal output is the concrete evidence; the blueprint explains why the architecture is shaped this way.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <h2>Control-plane reading</h2>
+      <div class="pattern-grid">
+        <article class="pattern-card"><h3>State Isolation</h3><p>Each role reads the fields it needs and returns one structured report.</p></article>
+<article class="pattern-card"><h3>Risk Routing</h3><p>The graph decides approved, needs revision, or human review.</p></article>
+<article class="pattern-card"><h3>Audit Trail</h3><p>Scores, duplicate evidence, and routing reason stay attached to the ticket.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Design insight</h2>
+      <p class="insight">Multi-agent design only pays off when responsibilities, state, and review boundaries are explicit.</p>
+    </section>
+  </main>
+</body>
+</html>
