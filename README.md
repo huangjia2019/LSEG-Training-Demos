@@ -51,7 +51,6 @@ See:
 
 - `docs/training-flow.md`
 - `docs/pattern-selection-card.md`
-- `docs/instructor-notes.md`
 
 ## Assets
 
