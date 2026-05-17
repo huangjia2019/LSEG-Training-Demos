@@ -1,0 +1,53 @@
+MONETARY AUTHORITY OF SINGAPORE
+
+MAS NOTICE 648
+PREVENTION OF MONEY LAUNDERING AND COUNTERING THE FINANCING OF TERRORISM
+— CAPITAL MARKETS INTERMEDIARIES
+
+Effective Date: 1 April 2020
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 3 — CUSTOMER DUE DILIGENCE
+
+3.1 General Requirements
+
+A capital markets intermediary ("CMI") shall conduct customer due diligence
+("CDD") measures when:
+(a) establishing business relations with any customer;
+(b) carrying out any transaction exceeding SGD 20,000;
+(c) there is a suspicion of money laundering or terrorism financing;
+(d) the CMI has doubts about the veracity of any information previously obtained.
+
+3.2 Enhanced Due Diligence
+
+3.2.1 A CMI shall perform enhanced due diligence ("EDD") for:
+(a) Politically Exposed Persons ("PEPs");
+(b) Correspondent banking relationships with institutions from jurisdictions
+    with strategic AML/CFT deficiencies.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 4 — SUSPICIOUS TRANSACTION REPORTING
+
+4.1 Reporting Obligations
+
+4.1.1 Where a CMI has reasonable grounds to suspect that any transaction
+is related to money laundering or terrorism financing, the CMI shall file
+a Suspicious Transaction Report ("STR") with the Suspicious Transaction
+Reporting Office within 15 business days from the date of detection.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 5 — RECORD KEEPING
+
+5.1 CDD Records
+
+5.1.1 A CMI shall maintain all CDD records for a minimum period of 5 years
+after:
+(a) the date of termination of the business relationship; or
+(b) the date of completion of the transaction (for one-off transactions).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This Notice shall take effect on 1 April 2020.

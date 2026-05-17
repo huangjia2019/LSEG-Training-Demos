@@ -1,0 +1,103 @@
+MONETARY AUTHORITY OF SINGAPORE
+
+MAS NOTICE 648 (AMENDMENT NO. 3)
+PREVENTION OF MONEY LAUNDERING AND COUNTERING THE FINANCING OF TERRORISM
+— CAPITAL MARKETS INTERMEDIARIES
+
+Effective Date: 1 July 2026
+Published: 15 March 2026
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 3 — CUSTOMER DUE DILIGENCE
+
+3.1 General Requirements
+
+A capital markets intermediary ("CMI") shall conduct customer due diligence
+("CDD") measures when:
+(a) establishing business relations with any customer;
+(b) carrying out any transaction exceeding SGD 5,000 (amended from SGD 20,000);
+(c) there is a suspicion of money laundering or terrorism financing;
+(d) the CMI has doubts about the veracity of any information previously obtained.
+
+3.2 Enhanced Due Diligence
+
+3.2.1 A CMI shall perform enhanced due diligence ("EDD") for:
+(a) Politically Exposed Persons ("PEPs") from jurisdictions rated "high-risk"
+    by the Financial Action Task Force ("FATF");
+(b) All new corporate accounts where beneficial owners are from jurisdictions
+    identified as non-cooperative by FATF;
+(c) Any transaction involving virtual assets or virtual asset service providers
+    exceeding SGD 1,000 (NEW);
+(d) Correspondent banking relationships with institutions from jurisdictions
+    with strategic AML/CFT deficiencies.
+
+3.2.2 EDD measures shall include, but not be limited to:
+(a) Obtaining senior management approval before establishing the business
+    relationship;
+(b) Taking reasonable measures to establish the source of wealth and source
+    of funds;
+(c) Conducting enhanced ongoing monitoring of the business relationship.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 4 — SUSPICIOUS TRANSACTION REPORTING
+
+4.1 Reporting Obligations
+
+4.1.1 Where a CMI has reasonable grounds to suspect that any transaction
+is related to money laundering or terrorism financing, the CMI shall file
+a Suspicious Transaction Report ("STR") with the Suspicious Transaction
+Reporting Office within 5 business days (amended from 15 business days)
+from the date of detection.
+
+4.1.2 A CMI shall implement automated transaction monitoring systems
+capable of real-time screening by 1 January 2027 (NEW). Such systems shall:
+(a) Screen all transactions against the latest sanctions lists within 24 hours
+    of list updates;
+(b) Generate alerts for transactions matching suspicious patterns;
+(c) Maintain an audit trail of all screening decisions.
+
+4.1.3 Where a CMI files an STR, the CMI shall not inform the customer
+or any other person about the filing.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 5 — RECORD KEEPING
+
+5.1 CDD Records
+
+5.1.1 A CMI shall maintain all CDD records for a minimum period of 7 years
+(amended from 5 years) after:
+(a) the date of termination of the business relationship; or
+(b) the date of completion of the transaction (for one-off transactions).
+
+5.2 Transaction Records
+
+5.2.1 A CMI shall maintain records of all transactions for a minimum period
+of 7 years after the date of the transaction.
+
+5.3 STR Records
+
+5.3.1 A CMI shall maintain records related to STRs for a minimum period
+of 7 years after the date of filing.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 6 — TECHNOLOGY AND DATA GOVERNANCE (NEW)
+
+6.1 Automated Monitoring Requirements
+
+6.1.1 A CMI shall deploy automated monitoring systems that are:
+(a) Capable of processing transactions in real-time or near-real-time;
+(b) Configurable to incorporate updated risk indicators and typologies;
+(c) Subject to regular model validation and performance assessment.
+
+6.2 Data Quality
+
+6.2.1 A CMI shall establish and maintain data quality standards for all
+customer and transaction data used in CDD and monitoring processes.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This Notice shall take effect on 1 July 2026.
