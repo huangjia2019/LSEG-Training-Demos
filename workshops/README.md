@@ -15,7 +15,7 @@ python main.py
 
 Expected demo result: a compliance impact report with source references, action items, and a quality gate.
 
-Visual walkthrough: `workshop1-compliance/visual/index.html`
+Interactive visual demo: `workshop1-compliance/visual/index.html`
 
 ## Workshop 2: Multi-Agent Ticket Review
 
@@ -30,7 +30,7 @@ python main.py
 
 Expected demo result: three sample tickets are reviewed by parser, quality, and knowledge agents, then routed by risk tier.
 
-Visual walkthrough: `workshop2-ticket-review/visual/index.html`
+Interactive visual demo: `workshop2-ticket-review/visual/index.html`
 
 ## Workshop 3: Copilot + SDD Meeting Agent
 
@@ -45,7 +45,7 @@ python main.py
 
 Expected demo result: a structured meeting-minutes report plus a quality check generated from the same spec.
 
-Visual walkthrough: `workshop3-copilot-demo/visual/index.html`
+Interactive visual demo: `workshop3-copilot-demo/visual/index.html`
 
 ## API Keys
 

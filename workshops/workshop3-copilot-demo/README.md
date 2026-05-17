@@ -17,7 +17,7 @@ cd src
 python main.py  # Demo 模式
 ```
 
-## 可视化讲解页
+## 交互式可视化 Demo
 
 运行 CLI 之后，可以直接打开：
 
@@ -25,7 +25,7 @@ python main.py  # Demo 模式
 open visual/index.html
 ```
 
-这页把同一个 demo 拆成六步：规约上下文、Copilot 计划、Prompt Chain、质量验证、Skill Package、渐进交付，并把 SDD 与设计模式对应起来。
+这页把同一个 demo 拆成六步：规约上下文、Copilot 计划、Prompt Chain、质量验证、Skill Package、渐进交付，并把 SDD 与设计模式对应起来。页面里可以点击 `Run Demo`、`Next Step`、`Reset`，实时查看规约如何驱动 prompt、代码、质量验证和可复用 skill。
 
 ## 文件结构
 

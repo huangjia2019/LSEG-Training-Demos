@@ -12,7 +12,7 @@ Start from concrete demos before introducing the pattern vocabulary.
 
 Each demo has a no-key path. If Azure OpenAI credentials are available, learners can switch from mock execution to model-backed execution by creating `.env` from `.env.example`.
 
-Each runnable workshop now has a visual page as well:
+Each runnable workshop now has an interactive visual page as well:
 
 | Case | CLI path | Visual page |
 |---|---|---|
@@ -20,7 +20,7 @@ Each runnable workshop now has a visual page as well:
 | Multi-agent ticket review | `workshops/workshop2-ticket-review` | `workshops/workshop2-ticket-review/visual/index.html` |
 | Copilot + SDD meeting agent | `workshops/workshop3-copilot-demo` | `workshops/workshop3-copilot-demo/visual/index.html` |
 
-Use the CLI output as the evidence, then use the visual page to inspect the architecture. The pattern blueprint diagrams live in `assets/visual/`.
+Use the CLI output as the evidence, then use the visual page to inspect the architecture. The visual page can run a browser-side simulation with step controls, a state inspector, execution log, and final output view. The pattern blueprint diagrams live in `assets/visual/`.
 
 ## Afternoon: Pattern Selection
 

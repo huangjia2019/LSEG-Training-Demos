@@ -62,7 +62,83 @@ pre { margin: 0; white-space: pre-wrap; color: var(--yellow); font-size: 14px; }
 .insight { border-left: 4px solid var(--yellow); padding-left: 18px; color: var(--text); font-size: 18px; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
 figcaption { color: var(--muted); font-size: 13px; margin-top: 8px; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
+.section-heading h2 { margin-bottom: 0; }
+.simulator { border-color: rgba(60, 222, 151, 0.65); background: rgba(8, 20, 35, 0.94); }
+.sim-controls { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+.sim-controls select,
+.sim-controls button {
+  background: #07101e;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  min-height: 40px;
+  padding: 8px 12px;
+}
+.sim-controls button { cursor: pointer; font-weight: 800; }
+.sim-controls button:first-of-type { border-color: var(--green); color: var(--green); }
+.sim-controls button:hover { border-color: var(--cyan); color: var(--cyan); }
+.sim-note { color: var(--muted); margin: 0 0 18px; }
+.sim-note code { color: var(--yellow); }
+.sim-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 18px; margin-top: 18px; }
+.sim-grid > * { min-width: 0; }
+.sim-grid h3 { color: var(--text); font-size: 17px; margin: 0 0 10px; }
+.interactive-steps { display: grid; gap: 10px; }
+.interactive-step {
+  background: rgba(16, 31, 52, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  cursor: pointer;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: 40px minmax(0, 1fr) minmax(80px, auto);
+  padding: 12px;
+}
+.interactive-step.done { border-color: var(--green); background: rgba(60, 222, 151, 0.09); }
+.interactive-step.active { border-color: var(--yellow); box-shadow: 0 0 0 2px rgba(255, 221, 90, 0.16); }
+.interactive-step .idx { color: var(--orange); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-weight: 900; }
+.interactive-step .name { font-weight: 800; min-width: 0; }
+.interactive-step .pattern { color: var(--cyan); font-size: 12px; justify-self: end; max-width: 100%; overflow-wrap: anywhere; text-align: right; }
+.interactive-step .mini { color: var(--muted); font-size: 13px; grid-column: 2 / 4; min-width: 0; }
+.state-view,
+.terminal-log,
+.output-view {
+  background: #050b14;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  min-height: 260px;
+  padding: 16px;
+}
+.state-view { color: var(--green); font-size: 13px; overflow: auto; }
+.terminal-log { color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; overflow: auto; }
+.terminal-log div { margin-bottom: 8px; }
+.terminal-log .active-line { color: var(--yellow); }
+.output-view { display: grid; gap: 12px; }
+.output-headline { color: var(--text); font-size: 18px; font-weight: 900; }
+.verdict {
+  border: 1px solid var(--green);
+  border-radius: 999px;
+  color: var(--green);
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 4px 10px;
+  width: max-content;
+}
+.verdict.warn { border-color: var(--yellow); color: var(--yellow); }
+.output-cards { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.output-card { background: rgba(23, 43, 70, 0.72); border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+.output-card strong { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.output-card span { color: var(--text); font-weight: 800; }
 @media (max-width: 860px) {
-  .lab-hero, .two-col, .step-grid, .pattern-grid { grid-template-columns: 1fr; }
+  .lab-hero, .two-col, .step-grid, .pattern-grid, .sim-grid, .output-cards { grid-template-columns: 1fr; }
+  .section-heading { align-items: stretch; flex-direction: column; }
+  .sim-controls { justify-content: stretch; }
+  .sim-controls select, .sim-controls button { flex: 1 1 auto; }
+  .interactive-step { grid-template-columns: 36px minmax(0, 1fr); }
+  .interactive-step .pattern { grid-column: 2; justify-self: start; text-align: left; }
+  .interactive-step .mini { grid-column: 2; }
   .lab-shell { padding: 28px 16px 48px; }
 }

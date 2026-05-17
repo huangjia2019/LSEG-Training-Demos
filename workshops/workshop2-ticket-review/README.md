@@ -22,7 +22,7 @@ cd src
 python main.py  # Demo 模式，演示三种工单场景
 ```
 
-## 可视化讲解页
+## 交互式可视化 Demo
 
 运行 CLI 之后，可以直接打开：
 
@@ -30,7 +30,7 @@ python main.py  # Demo 模式，演示三种工单场景
 open visual/index.html
 ```
 
-这页把同一个 demo 拆成六步：原始工单、Parser Agent、Quality Agent、Knowledge Agent、Merge 节点、Human Review，并把职责边界和风险路由对应到设计模式。
+这页把同一个 demo 拆成六步：原始工单、Parser Agent、Quality Agent、Knowledge Agent、Merge 节点、Human Review，并把职责边界和风险路由对应到设计模式。页面里可以切换 `Good ticket`、`Poor ticket`、`Potential duplicate` 三种场景，再点击 `Run Demo` 或 `Next Step` 观察不同路由结果。
 
 ## 文件结构
 

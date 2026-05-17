@@ -5,7 +5,7 @@ Training demos for the LSEG / Refinitiv AI Agent workshop.
 The repo has three layers:
 
 1. **Runnable workshops**: small Python projects that learners can download, install, and run locally.
-2. **Visual walkthroughs**: static HTML pages and blueprint PNGs that explain the same workshops step by step.
+2. **Interactive visual walkthroughs**: browser demos with step controls, state inspectors, blueprint PNGs, screenshots, and pattern mapping.
 3. **Showcase demos**: richer Streamlit demos for instructor walkthroughs, screenshots, and follow-up sessions.
 
 All runnable workshops include a no-key demo path. Azure OpenAI keys are optional for deeper exercises.
@@ -30,7 +30,7 @@ python main.py
 
 The same pattern works for `workshop2-ticket-review` and `workshop3-copilot-demo`.
 
-Open the visual walkthrough for the same case:
+Open the interactive visual walkthrough for the same case:
 
 ```bash
 open ../visual/index.html
@@ -61,7 +61,7 @@ The public case library has a finance landing page and one page per demo:
 
 Use these pages when a live local run is not convenient. They include run commands, flow diagrams, screenshots, and pattern mappings for each demo.
 
-The repo also includes local visual walkthrough pages. They are useful when you want to inspect the architecture without a web server:
+The repo also includes local interactive visual walkthrough pages. They are useful when you want to inspect the architecture without a web server:
 
 - `workshops/workshop1-compliance/visual/index.html`
 - `workshops/workshop2-ticket-review/visual/index.html`

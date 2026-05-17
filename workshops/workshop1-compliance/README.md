@@ -29,7 +29,7 @@ python main.py
 python main.py new_regulation.pdf baseline.pdf company_sop.pdf "AML/KYC"
 ```
 
-## 可视化讲解页
+## 交互式可视化 Demo
 
 运行 CLI 之后，可以直接打开：
 
@@ -37,7 +37,7 @@ python main.py new_regulation.pdf baseline.pdf company_sop.pdf "AML/KYC"
 open visual/index.html
 ```
 
-这页把同一个 demo 拆成六步：SDD 契约、文档接入、语义差异、政策 RAG、影响报告、质量门，并把每一步对应到设计模式。
+这页把同一个 demo 拆成六步：SDD 契约、文档接入、语义差异、政策 RAG、影响报告、质量门，并把每一步对应到设计模式。页面里可以点击 `Run Demo`、`Next Step`、`Reset`，实时查看状态 JSON、执行日志、质量门和最终输出。
 
 ## 文件结构
 

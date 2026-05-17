@@ -30,40 +30,76 @@
       <img src="../../../assets/visual/workshop1-pattern-blueprint.png" alt="Workshop 1 · Regulatory Document Agent blueprint">
     </section>
 
+    <section class="section simulator">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Interactive pattern simulator</div>
+          <h2>Run the architecture in the browser</h2>
+        </div>
+        <div class="sim-controls">
+          <select id="scenario-select" aria-label="Scenario"></select>
+          <button id="run-demo" type="button">Run Demo</button>
+          <button id="next-step" type="button">Next Step</button>
+          <button id="reset-demo" type="button">Reset</button>
+        </div>
+      </div>
+      <p class="sim-note">This browser demo does not replace <code>python src/main.py</code>. It makes the same pipeline observable: each click updates state, output, quality gate, and pattern mapping.</p>
+      <div class="sim-grid">
+        <div>
+          <h3>Live pipeline</h3>
+          <div id="interactive-steps" class="interactive-steps"></div>
+        </div>
+        <div>
+          <h3>State inspector</h3>
+          <pre id="state-view" class="state-view"></pre>
+        </div>
+      </div>
+      <div class="sim-grid">
+        <div>
+          <h3>Execution log</h3>
+          <div id="terminal-log" class="terminal-log"></div>
+        </div>
+        <div>
+          <h3>Current output</h3>
+          <div id="output-view" class="output-view"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <h2>Step-by-step architecture</h2>
       <div class="step-grid">
-        <article class="step-card">
+        <article class="step-card" data-step-index="0">
   <div class="step-number">01</div>
   <h3>SDD Contract</h3>
   <p>Input schema, output JSON, citation rule, confidence threshold.</p>
   <span class="chip">Spec as Contract</span>
 </article>
-<article class="step-card">
+<article class="step-card" data-step-index="1">
   <div class="step-number">02</div>
   <h3>Document Intake</h3>
   <p>Read MAS amendment, baseline notice, and internal AML/KYC SOP.</p>
   <span class="chip">Context Triage</span>
 </article>
-<article class="step-card">
+<article class="step-card" data-step-index="2">
   <div class="step-number">03</div>
   <h3>Semantic Diff</h3>
   <p>Turn long clauses into changed obligations and impact rows.</p>
   <span class="chip">Semantic Compaction</span>
 </article>
-<article class="step-card">
+<article class="step-card" data-step-index="3">
   <div class="step-number">04</div>
   <h3>Policy RAG</h3>
   <p>Ground interpretation in internal policies and source references.</p>
   <span class="chip">RAG Pipeline</span>
 </article>
-<article class="step-card">
+<article class="step-card" data-step-index="4">
   <div class="step-number">05</div>
   <h3>Impact Report</h3>
   <p>Emit cited impact, action items, owner, due date, and severity.</p>
   <span class="chip">Prompt Chaining</span>
 </article>
-<article class="step-card">
+<article class="step-card" data-step-index="5">
   <div class="step-number">06</div>
   <h3>Quality Gate</h3>
   <p>Block weak evidence, low confidence, or high-impact missing action.</p>
@@ -102,5 +138,128 @@ python main.py</pre></div>
       <p class="insight">The finance value is not a fluent summary. It is a reviewable chain from document evidence to operational action.</p>
     </section>
   </main>
+  <script id="demo-data" type="application/json">{
+  "title": "Interactive run · regulatory impact analysis",
+  "scenarios": [
+    {
+      "label": "MAS AML/KYC amendment",
+      "summary": "Lower CDD threshold, shorter STR window, internal SOP impact.",
+      "steps": [
+        {
+          "name": "Load SDD contract",
+          "pattern": "Spec as Contract",
+          "log": "Loaded compliance-spec.md: inputs, output schema, citation rule, confidence threshold.",
+          "state": {
+            "spec": "compliance-spec.md",
+            "required_fields": [
+              "changes",
+              "impact",
+              "actions",
+              "quality"
+            ],
+            "citation_required": true,
+            "confidence_threshold": 0.8
+          },
+          "output": "Contract accepted. The agent cannot emit uncited findings."
+        },
+        {
+          "name": "Parse evidence",
+          "pattern": "Context Triage",
+          "log": "Parsed MAS amendment, baseline notice, and internal AML/KYC SOP as separate evidence streams.",
+          "state": {
+            "new_doc_chars": 949,
+            "baseline_chars": 429,
+            "internal_policy": "company-sop-aml.txt",
+            "scope": "AML/KYC"
+          },
+          "output": "Evidence map created: new notice, baseline notice, internal SOP."
+        },
+        {
+          "name": "Extract semantic diff",
+          "pattern": "Semantic Compaction",
+          "log": "Compressed long clauses into two material changes with clause anchors.",
+          "state": {
+            "changes_found": 2,
+            "changed_topics": [
+              "CDD threshold",
+              "STR reporting window"
+            ],
+            "clauses": [
+              "4.2",
+              "7.1"
+            ]
+          },
+          "output": "Two impact rows generated from changed clauses."
+        },
+        {
+          "name": "Ground with policy",
+          "pattern": "RAG Pipeline",
+          "log": "Matched changes to AML SOP controls and implementation teams.",
+          "state": {
+            "policy_matches": 3,
+            "teams": [
+              "Compliance Operations",
+              "Engineering + Compliance"
+            ],
+            "source_refs": 2
+          },
+          "output": "Internal policy context attached to each impact row."
+        },
+        {
+          "name": "Generate report",
+          "pattern": "Prompt Chaining",
+          "log": "Created structured impact report with actions, owners, dates, and rationale.",
+          "state": {
+            "report_id": "CR-2026-0517-DEMO",
+            "overall_impact": "high",
+            "action_items": 2,
+            "review_required": false
+          },
+          "output": "Report ready: high impact, two action items, no open citation gaps."
+        },
+        {
+          "name": "Apply quality gate",
+          "pattern": "Approval Gate",
+          "log": "Citation completeness 2/2, all confidence values above threshold, high-impact actions covered.",
+          "state": {
+            "citation_completeness": "2/2",
+            "confidence": ">=0.86",
+            "gate": "PASS",
+            "observability": [
+              "citations",
+              "confidence",
+              "actions",
+              "checks"
+            ]
+          },
+          "output": "PASS: the report is reviewable and can move to compliance review workflow."
+        }
+      ],
+      "final": {
+        "verdict": "PASS",
+        "headline": "Compliance impact report generated",
+        "cards": [
+          [
+            "Changes",
+            "2 material changes"
+          ],
+          [
+            "Impact",
+            "High"
+          ],
+          [
+            "Actions",
+            "Revise AML SOP; pilot RAG-backed review"
+          ],
+          [
+            "Patterns",
+            "SDD + RAG + Approval Gate"
+          ]
+        ]
+      }
+    }
+  ]
+}</script>
+  <script src="../../_visual/interactive.js"></script>
 </body>
 </html>

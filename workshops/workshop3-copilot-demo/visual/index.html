@@ -30,40 +30,76 @@
       <img src="../../../assets/visual/workshop3-pattern-blueprint.png" alt="Workshop 3 · Copilot + SDD Meeting Agent blueprint">
     </section>
 
+    <section class="section simulator">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Interactive pattern simulator</div>
+          <h2>Run the architecture in the browser</h2>
+        </div>
+        <div class="sim-controls">
+          <select id="scenario-select" aria-label="Scenario"></select>
+          <button id="run-demo" type="button">Run Demo</button>
+          <button id="next-step" type="button">Next Step</button>
+          <button id="reset-demo" type="button">Reset</button>
+        </div>
+      </div>
+      <p class="sim-note">This browser demo does not replace <code>python src/main.py</code>. It makes the same pipeline observable: each click updates state, output, quality gate, and pattern mapping.</p>
+      <div class="sim-grid">
+        <div>
+          <h3>Live pipeline</h3>
+          <div id="interactive-steps" class="interactive-steps"></div>
+        </div>
+        <div>
+          <h3>State inspector</h3>
+          <pre id="state-view" class="state-view"></pre>
+        </div>
+      </div>
+      <div class="sim-grid">
+        <div>
+          <h3>Execution log</h3>
+          <div id="terminal-log" class="terminal-log"></div>
+        </div>
+        <div>
+          <h3>Current output</h3>
+          <div id="output-view" class="output-view"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <h2>Step-by-step architecture</h2>
       <div class="step-grid">
-        <article class="step-card">
+        <article class="step-card" data-step-index="0">
   <div class="step-number">01</div>
   <h3>Spec Context</h3>
   <p>Meeting output schema, quality checks, and follow-up email rules.</p>
   <span class="chip">Spec as Contract</span>
 </article>
-<article class="step-card">
+<article class="step-card" data-step-index="1">
   <div class="step-number">02</div>
   <h3>Copilot Plan</h3>
   <p>Generate project structure from the spec instead of loose prompts.</p>
   <span class="chip">Plan-and-Execute</span>
 </article>
-<article class="step-card">
+<article class="step-card" data-step-index="2">
   <div class="step-number">03</div>
   <h3>Prompt Chain</h3>
   <p>Separate extraction, validation, and email generation prompts.</p>
   <span class="chip">Prompt Chaining</span>
 </article>
-<article class="step-card">
+<article class="step-card" data-step-index="3">
   <div class="step-number">04</div>
   <h3>Validation</h3>
   <p>Use the same spec to check JSON fields, owners, dates, and length.</p>
   <span class="chip">Generator-Critic</span>
 </article>
-<article class="step-card">
+<article class="step-card" data-step-index="4">
   <div class="step-number">05</div>
   <h3>Skill Package</h3>
   <p>Package prompt, schema, examples, and run path into reusable work.</p>
   <span class="chip">Skill Package</span>
 </article>
-<article class="step-card">
+<article class="step-card" data-step-index="5">
   <div class="step-number">06</div>
   <h3>Progressive Commit</h3>
   <p>Move from mock run to model-backed run to team workflow.</p>
@@ -102,5 +138,119 @@ python main.py</pre></div>
       <p class="insight">SDD turns AI-assisted coding into governed system design: spec first, generated code second, validation always on.</p>
     </section>
   </main>
+  <script id="demo-data" type="application/json">{
+  "title": "Interactive run · Copilot + SDD meeting agent",
+  "scenarios": [
+    {
+      "label": "Compliance review meeting",
+      "summary": "Transcript contains AML monitoring actions, owners, and deadlines.",
+      "steps": [
+        {
+          "name": "Load meeting-agent spec",
+          "pattern": "Spec as Contract",
+          "log": "Loaded schema: summary, key_points, action_items, follow-up email.",
+          "state": {
+            "spec": "meeting-agent-spec.md",
+            "summary_limit": "100 words",
+            "min_key_points": 2,
+            "actions_need_owner": true
+          },
+          "output": "Copilot and runtime prompt now share one contract."
+        },
+        {
+          "name": "Generate implementation plan",
+          "pattern": "Plan-and-Execute",
+          "log": "Planned functions: generate_minutes(), validate_minutes(), generate_email().",
+          "state": {
+            "modules": [
+              "meeting_agent.py",
+              "main.py"
+            ],
+            "functions": [
+              "generate_minutes",
+              "validate_minutes",
+              "generate_email"
+            ]
+          },
+          "output": "Project structure follows the spec instead of a loose prompt."
+        },
+        {
+          "name": "Run prompt chain",
+          "pattern": "Prompt Chaining",
+          "log": "Extracted summary, key points, decisions, and action items from transcript.",
+          "state": {
+            "participants": 4,
+            "key_points": 4,
+            "action_items": 5,
+            "draft_email": true
+          },
+          "output": "Meeting minutes JSON generated."
+        },
+        {
+          "name": "Validate output",
+          "pattern": "Generator-Critic",
+          "log": "Checked summary length, owner coverage, topic count, and concrete deadlines.",
+          "state": {
+            "summary_length": 33,
+            "assignee_coverage": "all assigned",
+            "concrete_deadlines": true,
+            "quality_gate": "PASS"
+          },
+          "output": "Quality check passes against the same SDD spec."
+        },
+        {
+          "name": "Package reusable skill",
+          "pattern": "Skill Package",
+          "log": "Grouped prompt, schema, examples, validation, and run path as a reusable workflow.",
+          "state": {
+            "package_parts": [
+              "prompt",
+              "schema",
+              "examples",
+              "validation",
+              "run path"
+            ],
+            "reuse": "team workflow"
+          },
+          "output": "The work can be reused instead of copied as one-off prompt text."
+        },
+        {
+          "name": "Progressively commit",
+          "pattern": "Progressive Commitment",
+          "log": "Mock path is stable; next promotion is model-backed run, then team rollout.",
+          "state": {
+            "phase": "mock stable",
+            "next": "model-backed run",
+            "blast_radius": "limited"
+          },
+          "output": "The workflow is ready for controlled promotion."
+        }
+      ],
+      "final": {
+        "verdict": "PASS",
+        "headline": "Structured minutes and follow-up email generated",
+        "cards": [
+          [
+            "Key points",
+            "4"
+          ],
+          [
+            "Action items",
+            "5 assigned"
+          ],
+          [
+            "Quality",
+            "All checks pass"
+          ],
+          [
+            "Patterns",
+            "Prompt Chain + Critic + Skill Package"
+          ]
+        ]
+      }
+    }
+  ]
+}</script>
+  <script src="../../_visual/interactive.js"></script>
 </body>
 </html>
